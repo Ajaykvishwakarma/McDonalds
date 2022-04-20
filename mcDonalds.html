@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>McDonalds Order Menu</title>
+        <style>
+            #main1{
+                height:80px;
+                width:95%;
+             
+                margin:auto;
+                display:flex;
+                background-color: rgb(194, 194, 69);
+            }
+            #main1 > div:nth-child(1){
+                width:8%;
+                height:100%;
+                
+            }
+            #main1 > div:nth-child(1) > img {
+
+                width:100%;
+                height:100%;
+
+            }
+            #main1 > div:nth-child(2){
+                width:80%;
+                height:100%;
+             
+            }
+            .menu{
+                text-align: center;
+                font-size: 30px;
+                font-weight: bold;
+                font-family: sans-serif;
+                margin-top:20px;
+            }
+            #main1 > div:nth-child(3){
+                width:10%;
+                height:50%;
+               
+                text-align: center;
+                margin-top: 20px;
+                font-size: 20px;
+                display: flex;
+            }
+            #OrderNo{
+                height:100%;
+                width:100px;
+                margin-top: 10px;
+                margin: auto;
+                
+            }
+            #main1 > div:nth-child(3)>p{
+
+                margin-top: 10px;
+                font-weight: bold;
+
+            }
+
+            #container{
+                display:grid;
+                grid-template-columns: repeat(4, 1fr);
+                width:90%;
+                height:700px;
+                border-radius: 10px;
+                background-color: rgb(255, 111, 111);
+                margin: auto;
+                margin-top: 10px;
+            }
+            #container > div{
+              
+                height:250px;
+                width:250px;
+                margin:auto;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                border-radius: 5px;
+            }
+            #container > div > div{
+                display:flex;
+                height: 20%;
+                width:100%;
+                justify-content: space-between;
+               
+            }
+            img{    
+                width:100%;
+                height:80%;
+                border-radius: 5px;
+            }
+            h3{
+               
+                margin-top: 0px;
+            }
+            p{
+                margin-top: 4px; 
+            }
+            input{
+                margin-top:4px ;
+            }
+            #placeOrder{
+                height: 40px;
+                margin: auto;
+                padding:10px;
+                border:1px solid black;
+                background-color: darkorchid;
+                color:white;
+                font-size: 20px;
+                border-radius: 5px;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "main1">
+            <div><img src = "https://www.mcdonalds.com/content/dam/usa/nfl/assets/nav/arches-logo_108x108.jpg" ></div>
+            <div><p class = "menu"> Order Now </p></div>
+            <div></div>
+        </div>
+        <div id = "container">
+            <div>
+                <img  id = "img1"  src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_AAycHV7Pi4x7NAVcderGa-76CzBxOwfYZQ&usqp=CAU"/>
+                <div id = "first_div">
+                    <input type="checkbox" id="myCheck1">
+                    <h3 id = "First_name"> Mc. Burger</h3>
+                    <p>Rs.<p id = "price1">299.00</p></p>
+                </div>
+            </div>
+            <div><img src = "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/assets/images/1PUB_CCS_Deal_1168x520.jpg?$Publication_One_Column_Desktop$" id = "img2"/>
+                <div id = "sec_div">
+                    <input type="checkbox" id="myCheck2">
+                    <h3 id = "sec_name"> Mc. Burger</h3>
+                    <p>Rs.<p id = "price2">399.00</p></p>
+                </div>
+            </div>
+            <div><img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe49h-6OHYo55zgAkteg1dWVtdMKtov0-cpQ&usqp=CAU" id = "img3" />
+                <div id = "third_div">
+                    <input type="checkbox" id="myCheck3">
+                    <h3 id = "third_name"> Mc. Burger</h3>
+                    <p>Rs.<p id = "price3">499.00</p></p>
+                </div>
+            </div>
+            <div><img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs0mQR_UtqOncMgunPOqK48bwKn-87ds0ssQ&usqp=CAU" id = "img4" />
+                <div id = "four_div">
+                    <input type="checkbox" id="myCheck4">
+                    <h3 id = "four_name"> Mc. Burger</h3>
+                    <p>Rs.<p id = "price4">599.00</p></p>
+                </div>
+            </div>
+            <div><img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqsgjqzrQL3E2t622KtXIJ6Zh6EB7G9JoLmQ&usqp=CAU" id = "img5" />
+                <div id = "five_div">
+                    <input type="checkbox" id="myCheck5">
+                    <h3 id = "five_name"> Mc. Burger</h3>
+                    <p>Rs.<p id = "price5">699.00</p></p>
+                </div>
+            </div>
+            <div><img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRskphJu3WS1zDrqFeTGdAZFf4Jg53tGS3Qnw&usqp=CAU" id = "img6" />
+                <div id = "six_div">
+                    <input type="checkbox" id="myCheck6">
+                    <h3 id = "six_name"> Mc. Burger</h3>
+                    <p>Rs.<p id = "price6">799.00</p></p>
+                </div>
+            </div>
+            <div><img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrDQR-Pka_yO_k9n_T_Tsds7p1k2oa4PTUuw&usqp=CAU" id = "img7" />
+                <div id = "sev_div">
+                    <input type="checkbox" id="myCheck7">
+                    <h3 id = "sev_name"> Mc. Burger</h3>
+                    <p>Rs.<p id = "price7">899.00</p></p>
+                </div>
+            </div>
+            <div><img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUAUH5WoH4gS8ATz3t0pc2TFIPdJUaEEp4dw&usqp=CAU" id = "img8" />
+                <div id = "eight_div">
+                    <input type="checkbox" id="myCheck8">
+                    <h3 id = "eight_name"> Mc. Burger</h3>
+                    <p>Rs.<p id = "price8">999.00</p></p>
+                </div>
+            </div>
+           <button onclick = "myFunction()" id = "placeOrder"> <<< Order Food</button>
+        </div>
+        
+    </body>
+</html>
+<script>
+    
+
+    let array =JSON.parse(localStorage.getItem("McDonals")) || [];
+
+     function myFunction(){
+         
+     let a = document.getElementById("myCheck1").checked;
+     let b = document.getElementById("myCheck2").checked;
+     let c = document.getElementById("myCheck3").checked;
+     let d = document.getElementById("myCheck4").checked;
+     let e = document.getElementById("myCheck5").checked;
+     let f = document.getElementById("myCheck6").checked;
+     let g = document.getElementById("myCheck7").checked;
+     let h = document.getElementById("myCheck8").checked;
+     
+     if(a == true || b == true || c == true || d == true || e == true || f == true || g == true || h == true )
+     {
+        let flag = 0;
+        // alert("Your Order is Placed!")
+        
+
+        let userOrders = new Promise(function (resolve, reject){
+       setTimeout(function (){
+        if(flag == 0)
+        {
+            resolve(alert("Your Order is Placed Successfully!"))
+            window.location = "mcDonalds2.html"
+        }
+        else{
+
+            reject(alert("Please Buy something!"))
+        }
+        }, 2000)
+
+        })
+
+
+        userOrders.then(function (response){
+            console.log(response)
+        })
+
+        userOrders.catch(function (error){
+            console.log(error)
+        })
+
+     }
+
+ // First data
+     if(a == true){
+     let img = document.querySelector("#img1").src;
+     let name = document.querySelector("#First_name").textContent;
+     let price = document.querySelector("#price1").textContent;
+         let obj = {
+             image : img,
+             name : name,
+             price: price
+         };
+         array.push(obj)
+         localStorage.setItem("McDonals", JSON.stringify(array))
+     }
+ // Second data
+    if(b == true){
+     let img1 = document.querySelector("#img2").src;
+     let name1 = document.querySelector("#sec_name").textContent;
+     let price1 = document.querySelector("#price2").textContent;
+        let obj = {
+             image : img1,
+             name : name1,
+             price: price1
+         };array.push(obj)
+         localStorage.setItem("McDonals", JSON.stringify(array))
+        }
+
+
+        if(c == true){
+     let img1 = document.querySelector("#img3").src;
+     let name1 = document.querySelector("#sec_name").textContent;
+     let price1 = document.querySelector("#price3").textContent;
+        let obj = {
+             image : img1,
+             name : name1,
+             price: price1
+         };array.push(obj)
+         localStorage.setItem("McDonals", JSON.stringify(array))
+        }
+
+
+        if(d == true){
+     let img1 = document.querySelector("#img4").src;
+     let name1 = document.querySelector("#sec_name").textContent;
+     let price1 = document.querySelector("#price4").textContent;
+        let obj = {
+             image : img1,
+             name : name1,
+             price: price1
+         };array.push(obj)
+         localStorage.setItem("McDonals", JSON.stringify(array))
+        }
+
+
+        if(e == true){
+     let img1 = document.querySelector("#img5").src;
+     let name1 = document.querySelector("#sec_name").textContent;
+     let price1 = document.querySelector("#price5").textContent;
+        let obj = {
+             image : img1,
+             name : name1,
+             price: price1
+         };array.push(obj)
+         localStorage.setItem("McDonals", JSON.stringify(array))
+        }
+
+        
+        if(f == true){
+     let img1 = document.querySelector("#img6").src;
+     let name1 = document.querySelector("#sec_name").textContent;
+     let price1 = document.querySelector("#price6").textContent;
+        let obj = {
+             image : img1,
+             name : name1,
+             price: price1
+         };array.push(obj)
+         localStorage.setItem("McDonals", JSON.stringify(array))
+        }
+
+
+        if(g == true){
+     let img1 = document.querySelector("#img7").src;
+     let name1 = document.querySelector("#sec_name").textContent;
+     let price1 = document.querySelector("#price7").textContent;
+        let obj = {
+             image : img1,
+             name : name1,
+             price: price1
+         };array.push(obj)
+         localStorage.setItem("McDonals", JSON.stringify(array))
+        }
+
+
+        if(h == true){
+     let img1 = document.querySelector("#img8").src;
+     let name1 = document.querySelector("#sec_name").textContent;
+     let price1 = document.querySelector("#price8").textContent;
+        let obj = {
+             image : img1,
+             name : name1,
+             price: price1
+         };array.push(obj)
+         localStorage.setItem("McDonals", JSON.stringify(array))
+        }
+     }
+
+</script>

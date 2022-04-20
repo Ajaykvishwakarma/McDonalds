@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Order List</title>
+        <style>
+            #main1{
+                height:80px;
+                width:95%;
+             
+                margin:auto;
+                display:flex;
+                background-color: rgb(194, 194, 69);
+            }
+            #main1 > div:nth-child(1){
+                width:8%;
+                height:100%;
+                
+            }
+            #main1 > div:nth-child(1) > img {
+
+                width:100%;
+                height:100%;
+
+            }
+            #main1 > div:nth-child(2){
+                width:80%;
+                height:100%;
+             
+            }
+            .menu{
+                text-align: center;
+                font-size: 30px;
+                font-weight: bold;
+                font-family: sans-serif;
+                margin-top:20px;
+            }
+            #main1 > div:nth-child(3){
+                width:20%;
+                height:50%;
+               
+                text-align: center;
+                margin-top: 20px;
+                font-size: 20px;
+                display: flex;
+            }
+            #OrderNo{
+                height:50%;
+                width:100px;
+                margin-top: 10px;
+                margin: auto;
+                font-weight: bold;
+               
+                
+            }
+            #main1 > div:nth-child(3)>p{
+
+                margin-top: 10px;
+                font-weight: bold;
+
+            }
+            
+            #container{
+                display:grid;
+                grid-template-columns: repeat(3, 1fr);
+                width:70%;
+                min-height:700px;
+                border-radius: 10px;
+                background-color: rgb(255, 111, 111);
+                margin: auto;
+                margin-top: 10px;
+                padding:10px;
+            }
+            #container > div{
+              
+                height:250px;
+                width:250px;
+                margin:auto;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                border-radius: 5px;
+                margin-top:20px;
+                padding:10px;
+                background-color: rgb(219, 155, 155);
+            }
+            #container > div > div{
+                display:flex;
+                height: 20%;
+                width:100%;
+                justify-content: space-between;
+               
+            }
+            img{    
+                width:100%;
+                height:80%;
+                border-radius: 5px;
+            }
+            #showDetails{
+                width:71%;
+                margin: auto;
+                height: 100px;
+                margin-top:10px;
+                display:flex;
+                border-radius: 5px;
+                background-color: rgb(255, 111, 111);
+            }
+            #showDetails > div{
+                width:150px;
+                height: 30px;
+                margin-top: 37px;
+                color:white;
+                font-weight: bold;
+                font-family: sans-serif;
+                font-size:30px;
+
+            }
+            #showDetails > p{
+                padding:10px;
+                margin-top: 25px;
+                font-size: 30px;
+                font-weight: bold;
+                font-family: sans-serif;
+
+            }
+
+    </style>
+    </head>
+    <body>
+        <div id = "main1">
+            <div><img src = "https://www.mcdonalds.com/content/dam/usa/nfl/assets/nav/arches-logo_108x108.jpg" ></div>
+            <div><p class = "menu"> Your Order</p></div>
+            <div><p> Total Items :</p><div id = "OrderNo"></div></div>
+        </div>
+        <div id = "showDetails"><p> Total ID :</p><div id = "orderid"></div><p> Total Price Rs. :</p><div id = "titalprice"></div></div>
+        <div id = "container"></div>
+    </body>
+</html>
+<script>
+
+    let userOrder = JSON.parse(localStorage.getItem("McDonals")) || [];
+    
+    let passed = userOrder.length;
+    let userOrders = new Promise(function (resolve, reject){
+    setTimeout(function (){
+        if(passed >= 1)
+    {
+        resolve(alert("Your Order Delevered Successfully!"))
+    }
+    else{
+
+        reject(alert("Please Buy something!"))
+    }
+    }, 5000)
+
+})
+
+
+userOrders.then(function (response){
+    console.log(response)
+})
+
+userOrders.catch(function (error){
+    console.log(error)
+})
+
+
+    console.log(userOrder)
+
+    var showNo = document.querySelector("#OrderNo");
+    showNo.textContent = userOrder.length;
+
+    let sum = 0;
+    userOrder.map(function (elem){
+        let div = document.createElement("div");
+        let img = document.createElement("img");
+        img.setAttribute("src", elem.image);
+        let h2 = document.createElement("h2");
+        h2.textContent = elem.name;
+        h2.style.textAlign = "center"
+
+
+        sum  =sum + Number(elem.price);
+        div.append(img, h2)
+        document.querySelector("#container").append(div);
+
+
+    })
+       var Totalprice = document.querySelector("#titalprice");
+       Totalprice.textContent = sum; 
+       var id = document.querySelector("#orderid");
+       if(userOrder.length >= 1)
+       {
+        id.textContent = 29394; 
+       }
+       
+
+</script>
